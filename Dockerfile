@@ -8,7 +8,10 @@ RUN python -m pip install pip --upgrade \
 	&& rm -r ~/.cache/pip \ 
 	&& ln -s $NEO4J_HOME/bin/neo4j /bin/neo4j \ 
 	&& echo 'rm -r .joernIndex && java -jar $JOERN_HOME/bin/joern.jar $@' > /bin/joern && chmod +x /bin/joern \ 
-	&& echo 'python $CHUCKY_HOME/chucky.py' > /bin/chucky && chmod +x /bin/joern 
+	&& echo 'python $CHUCKY_HOME/chucky.py' > /bin/chucky && chmod +x /bin/chucky \
+	&& echo 'find . -name ".joernIndex" | xargs rm -rf && joern . ' > /bin/run_joern && chmod +x run_joern\
+	&& echo 'neo4j start && chucky $@' > /bin/run_chucky && chmod +x /bin/run_chucky 
+
 # EXPOSE 7474
 
 
