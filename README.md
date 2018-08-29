@@ -5,7 +5,7 @@ Chucky new generation
 
 # Docker run method
   1. generate joern database  
-   `docker run --rm -v /path/to/source/code:/code imakar/chucky run_joern` 
+   `docker run --rm -v /path/to/source/code:/code imakar/chucky joern . ` 
   2. run chucky check   
    `docker run --rm -v /path/to/source/code:/code imakar/chucky run_chucky [chucky parameters]`
 
