@@ -1,0 +1,3 @@
+#!/bin/bash
+ls .joernIndex >/dev/null && rm -rf .joernIndex ||echo "" 
+joern . 
