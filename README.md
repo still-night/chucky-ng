@@ -1,5 +1,15 @@
 chucky-ng
 ==============
+	docker run -it --rm -v /path/to/your/code:/code imakar\chucky [arguments]
+	
+	chucky:
+	usage: chucky.py [-h] [-i {function,callee,parameter,variable}]
+                 [-n N_NEIGHBORS] [-c CHUCKY_DIR] [--interactive] [-l LIMIT]
+                 [-d | -v | -q]
+                 identifier
+
+Following is from new generation of chucky by http://github.com/yangke
+==============
 
 Chucky new generation
 
